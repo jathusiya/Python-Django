@@ -1,0 +1,62 @@
+<!-- interview_app/templates/school_list.html -->
+{% extends 'awards/layouts/main.html' %}
+{% block title %}
+Subject
+{% endblock title %}
+{% block content %}
+<section class="bg-light py-4 my-5" style="min-height:600px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h4 class="mb-3">Subject_List</h4>
+          <hr style="border-color:#b8bfc2;">
+        </div>
+      
+        <table class="table table-bordered" style=" display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Adjust column width as needed */
+        gap: 10px;">
+          <tr>
+              <th>Id</th>
+              <th>School Id</th>
+              <th>Sydney Participant</th>
+              <th>Sydney Percentile</th>
+              <th>Assessment Area Id</th>
+              <th>Award Id</th>
+              <th>Class Id</th>
+              <th>Correct Answer Percentage Per Class</th>
+              <th>Correct Answer</th>
+              <th>Student Id</th>
+              <th>Participant</th>
+              <th>Student Score</th>
+              <th>Subject Id</th>
+              <th>Year Level Name</th>
+              <th>Answer Id</th>
+              <th>Action</th>
+          </tr>
+        
+          {% for item in summary %}
+          <tr>
+              <td>{{ item.id }}</td>
+              <td>{{ item.school_name}}</td>
+              <td>{{ item.sydney_participant }}</td>
+              <td>{{ item.sydney_percentile }}</td>
+              <td>{{ item.assessment_name}}</td>
+              <td>{{ item.award}}</td>
+              <td>{{ item.classes}}</td>
+              <td>{{ item.correct_answer_percentage_per_class }}</td>
+              <td>{{ item.correct_answer }}</td>
+              <td>{{ item.studentId}}</td>
+              <td>{{ item.participant }}</td>
+              <td>{{ item.student_score }}</td>
+              <td>{{ item.subject}}</td>
+              <td>{{ item.year_level_name }}</td>
+              <td>{{ item.answer}}</td>
+          </tr>
+          {% endfor %}
+      </table>
+      
+        </div>
+    </div>
+   </section>
+{% endblock content %}
+

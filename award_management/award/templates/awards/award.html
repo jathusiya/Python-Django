@@ -1,0 +1,36 @@
+<!-- interview_app/templates/school_list.html -->
+{% extends 'awards/layouts/main.html' %}
+{% block title %}
+Awards
+{% endblock title %}
+{% block content %}
+<section class="bg-light py-4 my-5" style="min-height:600px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h4 class="mb-3">Awards_List</h4>
+          <hr style="border-color:#b8bfc2;">
+        </div>
+      
+        <table class="table table-bordered" style=" display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Adjust column width as needed */
+        gap: 10px;">
+            <tr>
+                <th>Id</th>
+                <th>Award</th>
+            </tr>
+          
+            {% for item in award %}
+           <tr>
+              <td>{{ item.id }}</td>
+              <td>{{ item.award }}</td>
+              {% comment %} <td><a href="#"  onclick="return confirm('Are you sure? to Remove')"  class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Remove</a></td> {% endcomment %}
+            </tr>
+            {% endfor %}
+
+          </table>
+        </div>
+    </div>
+   </section>
+{% endblock content %}
+

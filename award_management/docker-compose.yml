@@ -1,0 +1,9 @@
+version: '3.8'  # Adjust the version as needed
+
+services:
+  web:
+    build:
+      context: C:\Users\hp\Desktop\interview\award_management\award_management
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"

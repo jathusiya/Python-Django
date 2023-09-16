@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+.carousel-item img{
+    object-fit: cover;
+    object-position: top;
+    height: 70vh;
+    overflow: hidden;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    font-family: 'Noto Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+.old_price{
+    font-weight: bold;
+    color: red;
+}
+
+.new_price{
+    font-weight: bold;
+    background-color: green;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.pic-box{
+    position: relative;
+}
+
+.hot{
+    background-color: orangered;
+    color: white;
+    width: 75px;
+    font-weight: bold;
+    display: inline;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top:0;
+    right: 20px;
+    z-index: 10;
+    text-align: center;
+}
